@@ -1,0 +1,175 @@
+:root {
+    --azul: #0071b7;
+    --blanco: #FFF;
+    --naranja: #ff4f1e;
+}
+html {
+    font-size: 62.5%; /** 1REM = 10pX **/
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+  
+body {
+    background-color: var(--azul);
+    font-family:  'Lato', sans-serif;
+    font-size: 1.6rem;
+}
+
+h1, h2 {
+    color: var(--blanco);
+    text-align: center;
+    margin: 5rem 0;
+    padding: 1rem;
+}
+.caja-curso {
+    background-color: var(--naranja);
+    text-align: center;
+    color: var(--blanco);
+    padding: 5rem;
+
+}
+.caja-curso h1 {
+    margin: 0;
+}
+.caja-curso p {
+    font-size: 2.4rem;
+}
+.caja-curso a {
+    font-size: 2.4rem;
+    padding: 2rem;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 0;
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.box {
+    background-color: var(--naranja);
+    color: var(--blanco);
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    border: 1rem solid #bb2b03;
+}
+
+.codigo {
+    background-color: var(--blanco);
+    padding: 5rem;
+}
+
+
+.primer-parrafo{
+    font-size: 4rem;
+    color: red;
+}
+
+.texto.azul{
+    color: blue;
+    font-size: 4rem;
+}
+
+.descripcion{
+    color: #0071b7;
+}
+
+/*selector de clase doble*/
+
+.header .descripcion{
+    color: red;
+}
+
+/*id*/
+
+#encabezado{
+    color: red;
+    text-transform: uppercase;
+}
+
+#encabezado.texto{
+    color: tomato;
+
+}
+
+.texto{
+    color: blue;
+}
+
+/*etiqueta y clase*/
+
+div.texto{
+    background-color: yellow;
+}
+
+/*Dos elementos*/
+.texto07, 
+.oferta{
+    border: 3px solid yellow;
+    padding: 2rem;
+}
+
+/*Primer nivel de hijos*/
+
+.admin > div{
+    border: 2px solid red;
+}
+
+/*Primer Elemento Después*/
+
+.admin div + p{
+    background-color: red;
+}
+
+/*Atributo*/
+
+a[href$=".com"]{
+    color: red;
+}
+
+input[id="telefono"]{
+    color: #ff4f1e;
+}
+
+/*Primer Hijo de una lista*/
+ul li:first-child{
+    border: 1px solid blue;
+}
+
+/*último Hijo de una lista*/
+
+ul li:last-child{
+    border: 1px solid rebeccapurple;
+}
+
+/*Elemento en Especifico */
+
+.trece ul li:nth-child(4n + 4){
+    border: 1px solid red;
+}
+
+/*Seleccionar todos los elementos excepto uno o unos*/
+
+/*p:not(.texto){
+    color: red;
+} uno solo*/
+
+
+p:not(.texto):not(.oferta){
+    color: red;
+}
+
+/*Primer Letra y Linea*/
+
+.primer-letra::first-letter{
+    font-size: 20rem;
+}
+
+.primer-linea::first-line{
+    font-size: 4rem;
+}
